@@ -1,32 +1,18 @@
 # Backtor
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/backtor`.
+Backtor is an experimental, thread-based backport of Ractor to earlier Ruby
+versions.
 
-TODO: Delete this and the text above, and describe your gem
+Since it's based on Ruby's `Thread` mechanism, you don't get the true
+concurrency of Ractors, but it does mean that you can write applications using
+Ractor and still have them work at a reduced speed in Ruby 2.
 
-## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'backtor'
-```
-
-And then execute:
-
-    $ bundle install
-
-Or install it yourself as:
-
-    $ gem install backtor
-
-## Usage
-
-TODO: Write usage instructions here
+This is still a work in progress! The basic `yield`/`take` and `send`/`recv`
+mechanisms are implemented, but very little else.
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/backtor.
+Bug reports and pull requests are welcome on GitHub at https://github.com/AaronC81/backtor.
 
 
 ## License
